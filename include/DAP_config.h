@@ -497,6 +497,9 @@ It is recommended to provide the following LEDs for status indication:
  - Running LED: is active when the debugger has put the target device into running state.
 */
 
+extern uint32_t bit_PROBE_DAP_CONNECTED_LED;
+extern uint32_t bit_PROBE_DAP_RUNNING_LED;
+
 /** Debug Unit: Set status of Connected LED.
 \param bit status of the Connect LED.
            - 1: Connect LED ON: debugger is connected to CMSIS-DAP Debug Unit.
@@ -506,6 +509,7 @@ __STATIC_INLINE void LED_CONNECTED_OUT (uint32_t bit) {
 #ifdef PROBE_DAP_CONNECTED_LED
   gpio_put(PROBE_DAP_CONNECTED_LED, bit);
 #endif
+  bit_PROBE_DAP_CONNECTED_LED = bit;
 }
 
 /** Debug Unit: Set status Target Running LED.
@@ -517,6 +521,7 @@ __STATIC_INLINE void LED_RUNNING_OUT (uint32_t bit) {
 #ifdef PROBE_DAP_RUNNING_LED
   gpio_put(PROBE_DAP_RUNNING_LED, bit);
 #endif
+  bit_PROBE_DAP_RUNNING_LED = bit;
 }
 
 ///@}

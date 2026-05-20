@@ -65,6 +65,9 @@ static uint8_t RxDataBuffer[CFG_TUD_HID_EP_BUFSIZE];
 
 TaskHandle_t dap_taskhandle, tud_taskhandle, mon_taskhandle;
 
+uint32_t bit_PROBE_DAP_CONNECTED_LED = 0;
+uint32_t bit_PROBE_DAP_RUNNING_LED = 0;
+
 static int was_configured;
 
 static struct {
@@ -136,6 +139,17 @@ void usb_thread(void *ptr)
         else
             gpio_put(PROBE_USB_CONNECTED_LED, 0);
 #endif
+#ifdef PROBE_WS2812_PIN
+        if (!tud_ready()) {
+            ws2812_put_pixel(0, 0, 0);
+        } else if (bit_PROBE_DAP_RUNNING_LED) {
+            ws2812_put_pixel(0, 255, 0);
+        } else if (bit_PROBE_DAP_CONNECTED_LED) {
+            ws2812_put_pixel(0, 0, 255);
+        } else {
+            ws2812_put_pixel(255, 0, 0);
+        }
+#endif
         // If suspended or disconnected, delay for 1ms (20 ticks)
         if (tud_suspended() || !tud_connected())
             xTaskDelayUntil(&wake, 20);
@@ -162,7 +176,7 @@ int main(void) {
         ws2812_program_init(ws2812.pio, ws2812.sm, offset, PROBE_WS2812_PIN, 800000, false);
     } while (0);
 
-    ws2812_put_pixel(0, 255, 0);
+    //ws2812_put_pixel(0, 255, 0);
     board_init();
     usb_serial_init();
     cdc_uart_init();
