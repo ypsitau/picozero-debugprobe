@@ -59,7 +59,7 @@ target_include_directories(debugprobe PRIVATE
         ${CMAKE_BINARY_DIR}/generated
         )
 
-add_dependencies(debugprobe version)
+#add_dependencies(debugprobe version)
 
 target_compile_definitions (debugprobe PRIVATE
 	PICO_RP2040_USB_DEVICE_ENUMERATION_FIX=1
