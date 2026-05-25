@@ -42,7 +42,10 @@ When the debugging session is active, the onboard LED will light up in green.
 
 ## Case
 
+Download the STL files for 3D printing:
 
+- [Bottom](https://raw.githubusercontent.com/ypsitau/picozero-debugprobe/main/freecad/PicoZeroDebugProbe-Bottom.stl)
+- [Top](https://raw.githubusercontent.com/ypsitau/picozero-debugprobe/main/freecad/PicoZeroDebugProbe-Top.stl)
 
 ![case-cad](images/case-cad.png)
 
