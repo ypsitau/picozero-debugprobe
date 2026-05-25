@@ -40,6 +40,14 @@ When the debugging session is active, the onboard LED will light up in green.
 
 ![usage-running](images/usage-running.png)
 
+## Case
+
+
+
+![case-cad](images/case-cad.png)
+
+![case](images/case.png))
+
 ## Building
 
 1. Clone the repository:
