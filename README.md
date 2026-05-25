@@ -12,9 +12,9 @@ Modifications are:
 
 1. Download [debugprobe_on_pico.uf2](https://github.com/ypsitau/picozero-debugprobe/releases/latest/download/debugprobe_on_pico.uf2).
 
-2. Connect the RP2040-Zero to your computer while holding the BOOTSEL button to enter USB mass storage mode.
+2. Connect the RP2040-Zero to your computer while holding the BOOTSEL button. A drive named `RPI-RP2` should appear.
 
-3. Copy the `debugprobe_on_pico.uf2` file to the RP2040-Zero's storage.
+3. Copy the `debugprobe_on_pico.uf2` file to the drive.
 
 ## Pinout
 
