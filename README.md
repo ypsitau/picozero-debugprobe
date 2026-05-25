@@ -7,6 +7,7 @@ Modifications are:
 - Adjusted pin configurations to match the RP2040-Zero's layout.
 - Uses the onboard full-color LED WS2812 for status indication.
 - Modified `CMakeLists.txt` to target the RP2040-Zero by default.
+- Created a custom case.
 
 ## Flashing Pre-built Binary
 
@@ -46,6 +47,8 @@ Download the STL files for 3D printing:
 
 - [Case Top](https://raw.githubusercontent.com/ypsitau/picozero-debugprobe/master/freecad/picozero-debugprobe-Top.stl)
 - [Case Bottom](https://raw.githubusercontent.com/ypsitau/picozero-debugprobe/master/freecad/picozero-debugprobe-Bottom.stl)
+
+White filament is recommended for printing the case, as it can better show the RGB colors of the onboard LED.
 
 Assemble the case with M3x5 screws.
 
