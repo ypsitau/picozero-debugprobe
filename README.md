@@ -47,9 +47,9 @@ Download the STL files for 3D printing:
 - [Bottom](https://raw.githubusercontent.com/ypsitau/picozero-debugprobe/main/freecad/PicoZeroDebugProbe-Bottom.stl)
 - [Top](https://raw.githubusercontent.com/ypsitau/picozero-debugprobe/main/freecad/PicoZeroDebugProbe-Top.stl)
 
-![case-cad](images/case-cad.png)
+Assemble the case with M3x5 screws.
 
-![case](images/case.png))
+![case-cad](images/case-cad.png) ![case](images/case.png))
 
 ## Building
 
