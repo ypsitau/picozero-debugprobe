@@ -16,29 +16,6 @@ Modifications are:
 
 3. Copy the `debugprobe_on_pico.uf2` file to the RP2040-Zero's storage.
 
-## Building and Flashing
-
-1. Clone the repository:
-
-   ```
-   $ git clone https://github.com/ypsitau/picozero-debugprobe
-   $ cd picozero-debugprobe
-   ```
-
-2. Initialize and update submodules:
-
-   ```
-   $ git submodule update --init --recursive
-   ```
-3. Build the project:
-
-   ```
-   $ cmake -B build -G Ninja
-   $ cmake --build build
-   ```
-
-   After building successfully, you should find the `debugprobe_on_pico.uf2` file in the `build` directory.
-
 ## Pinout
 
 |GPIO|Function|
@@ -62,6 +39,29 @@ When the board is connected to the USB port, the onboard LED will light up in re
 When the debugging session is active, the onboard LED will light up in green.
 
 ![usage-running](images/usage-running.png)
+
+## Building
+
+1. Clone the repository:
+
+   ```
+   $ git clone https://github.com/ypsitau/picozero-debugprobe
+   $ cd picozero-debugprobe
+   ```
+
+2. Initialize and update submodules:
+
+   ```
+   $ git submodule update --init --recursive
+   ```
+3. Build the project:
+
+   ```
+   $ cmake -B build -G Ninja
+   $ cmake --build build
+   ```
+
+   After building successfully, you should find the `debugprobe_on_pico.uf2` file in the `build` directory.
 
 ## References
 
