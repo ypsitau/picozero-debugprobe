@@ -8,6 +8,12 @@ Modifications are:
 - Uses the onboard full-color LED WS2812 for status indication.
 - Modified `CMakeLists.txt` to target the RP2040-Zero by default.
 
+## Pre-built Firmware
+
+[debugprobe_on_pico.uf2](https://github.com/ypsitau/picozero-debugprobe/releases/latest/download/debugprobe_on_pico.uf2)            |
+
+Connect the RP2040-Zero to your computer while holding the BOOTSEL button to enter USB mass storage mode. Then, copy the `debugprobe_on_pico.uf2` file to the RP2040-Zero's storage.
+
 ## Building and Flashing
 
 1. Clone the repository:
@@ -31,8 +37,6 @@ Modifications are:
 
    After building successfully, you should find the `debugprobe_on_pico.uf2` file in the `build` directory.
 
-4. Connect the RP2040-Zero to your computer while holding the BOOTSEL button to enter USB mass storage mode. Then, copy the generated `debugprobe_on_pico.uf2` file from the `build` directory to the RP2040-Zero's storage.
-
 ## Pinout
 
 |GPIO|Function|
@@ -49,7 +53,7 @@ Modifications are:
 
 ## Usage
 
-When the board is connected the USB port, the onboard LED will light up in red, indicating that the debug probe is ready.
+When the board is connected to the USB port, the onboard LED will light up in red, indicating that the debug probe is ready.
 
 ![usage-ready](images/usage-ready.png)
 
