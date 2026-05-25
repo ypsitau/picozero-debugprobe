@@ -35,12 +35,25 @@ Forked from the original [Raspberry Pi Debug Probe](https://github.com/raspberry
 
 |GPIO|Function|
 |---|---|
-|GPIO8|TXD|
-|GPIO9|RXD|
+|GPIO8|UART TX|
+|GPIO9|UART RX|
 |GPIO10|SWCLK|
 |GPIO12|SWDIO|
 
 ![Wiring Image](images/picozero-wired-note.png)
+
+- GPIO11 and GPIO13 are connected to GND.
+- GPIO14 is NOT connected to the pin header, so the pin can be connected to 5V instead.
+
+## Usage
+
+When the board is connected the USB port, the onboard LED will light up in red, indicating that the debug probe is ready.
+
+![usage-ready](images/usage-ready.png)
+
+When the debugging session is active, the onboard LED will light up in green.
+
+![usage-running](images/usage-running.png)
 
 ## References
 
